@@ -65,7 +65,7 @@ class Dataset(object):
                 for word in sent:       
                     if len(word) == 0:
                         continue
-                    if word_and_counts.has_key(word):
+                    if word in word_and_counts:
                         word_and_counts[word] += 1
                     else:
                         word_and_counts[word] = 1

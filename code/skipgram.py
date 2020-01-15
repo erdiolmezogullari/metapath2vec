@@ -10,7 +10,9 @@ I consluted the public implementation of word2vec:https://github.com/chiphuyen/s
 
 import os
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
 import json
 
 def build_model(BATCH_SIZE,VOCAB_SIZE,EMBED_SIZE,NUM_SAMPLED):
